@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+/* Raleway, 400 & 700 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: url(images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: 90vw;
+}
+
+section {
+  color: var(--Pale-Blue);
+  background-color: var(--Dark-Blue);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.upload-section {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.main-logo {
+  margin-bottom: 2rem;
+}
+
+.upload-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10%;
+  margin-top: 2rem;
+}
+
+.upload-buttons div {
+  background-color: var(--Very-Dark-Blue);
+  padding: 0.7rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-section {
+  position: relative;
+  border-radius: 15px;
+}
+
+span {
+  font-weight: 700;
+}
+
+.bar {
+  height: 1.2rem;
+  background-color: var(--Very-Dark-Blue);
+  border-radius: 500px;
+  padding: 0.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.progress-line {
+  display: flex;
+  justify-content: flex-end;
+  background: rgb(255, 163, 153);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 163, 153, 1) 0%,
+    rgba(255, 77, 151, 1) 100%
+  );
+  height: 100%;
+  width: 70%;
+  border-radius: 500px;
+  padding: 0.1rem;
+}
+
+.dot {
+  width: 0.8rem;
+  background-color: var(--Pale-Blue);
+  border-radius: 500px;
+}
+
+.gb-available {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.gb-left-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.gb-left {
+  background-color: var(--Pale-Blue);
+  color: var(--Very-Dark-Blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gb-left p {
+  color: var(--Grayish-Blue);
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    height: 100vh;
+    background-image: url(images/bg-desktop.png);
+    background-color: var(--Very-Dark-Blue);
+    background-position: bottom;
+    background-size: contain;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+  }
+
+  .upload-section {
+    width: 20%;
+  }
+
+  .progress-section {
+    width: 40%;
+  }
+}
