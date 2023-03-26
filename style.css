@@ -11,6 +11,7 @@
   --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
   --Pale-Blue: hsl(243, 100%, 93%);
   --Grayish-Blue: hsl(229, 7%, 55%);
+  --Light-Blue: hsl(228, 56%, 35%);
   --Dark-Blue: hsl(228, 56%, 26%);
   --Very-Dark-Blue: hsl(229, 57%, 11%);
 }
@@ -37,10 +38,10 @@ section {
 }
 
 .upload-section {
-  border-top-left-radius: 15px;
+  border-top-left-radius: 10px;
   border-top-right-radius: 100px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .main-logo {
@@ -54,6 +55,19 @@ section {
   margin-top: 2rem;
 }
 
+.file,
+.folder,
+.upload {
+  transition: 0.2s ease;
+}
+
+.file:hover,
+.folder:hover,
+.upload:hover {
+  cursor: pointer;
+  background-color: var(--Light-Blue);
+}
+
 .upload-buttons div {
   background-color: var(--Very-Dark-Blue);
   padding: 0.7rem;
@@ -65,7 +79,7 @@ section {
 
 .progress-section {
   position: relative;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 span {
@@ -127,9 +141,14 @@ span {
   justify-content: space-between;
 }
 
+.gb-left h2 {
+  margin-right: 0.5rem;
+}
+
 .gb-left p {
   color: var(--Grayish-Blue);
   font-size: 0.8rem;
+  margin-right: 0.5rem;
 }
 
 @media only screen and (min-width: 900px) {
@@ -144,14 +163,59 @@ span {
   main {
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 2%;
+  }
+
+  .main-logo {
+    margin: 0;
   }
 
   .upload-section {
-    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 13rem;
+    width: 21%;
+    padding: 3rem;
   }
 
   .progress-section {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
     width: 40%;
+  }
+
+  .gb-available {
+    margin: 0;
+  }
+
+  .gb-left-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .gb-left {
+    position: absolute;
+    top: -60px;
+    font-size: 2rem;
+  }
+
+  .gb-left p {
+    z-index: 1;
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-top: 45px solid transparent;
+    border-right: 40px solid var(--Pale-Blue);
+    border-bottom: 45px solid transparent;
+    position: absolute;
+    top: 25px;
+    right: 0;
   }
 }
